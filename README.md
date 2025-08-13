@@ -23,10 +23,10 @@ Trading based solely on indicators is not recommended. Many people lose money tr
 ### Community and Support
 If you have any questions, feel free to DM me on TradingView or GitHub. If you find these indicators useful, please star this repository on GitHub or boost them on my [TradingView account](https://www.tradingview.com/u/EmotionalTrader777/) Your support helps me continue developing these tools!
 
-### Future Updates
-These versions are very simple and basic, and they are free to use. I am currently working on deploying more advanced algorithms in the near future, so keep an eye out here on my GitHub or my [TradingView account](https://www.tradingview.com/u/EmotionalTrader777/) for updates.
+## Future Updates
+These are basic free versions. I’m working on more advanced algorithms, so watch this GitHub repository for future releases.
 
-## 👤 Author - **EmotionalTrader**  
+### 👤 Author - **EmotionalTrader**  
 
 - Futures trader, Python learner, aspiring asset trader
 - [TradingView Profile](https://www.tradingview.com/u/EmotionalTrader777/)  
