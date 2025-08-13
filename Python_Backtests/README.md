@@ -23,7 +23,16 @@ By running these scripts, you can:
 
 ---
 
-## 🛠 Requirements
-Install dependencies with:
+## ⚙️ Requirements / Installation
+
+Make sure you have **Python 3.9+** installed.  
+Install the dependencies with:
+
 ```bash
 pip install pandas numpy matplotlib yfinance
+pip install backtrader ta   # optional for advanced backtesting features
+```
+
+## 📂 Data Sources
+- Free: yfinance for SPY, QQQ, and other ETFs.
+- Paid: Polygon.io, IQFeed, or similar providers for MES/ES futures data (includes outside regular market hours).
