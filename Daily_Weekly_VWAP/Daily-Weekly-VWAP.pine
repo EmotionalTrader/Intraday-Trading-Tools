@@ -1,0 +1,116 @@
+//@version=6
+indicator("VWAP Combo: Weekly + Fibo & Daily + Stand dev", overlay=true, max_bars_back=1000)
+
+// ----------------------
+// User toggles & inputs
+// ----------------------
+showV1 = input.bool(true, "Show V1: Weekly VWAP + Fibo Bands")
+showV2 = input.bool(true, "Show V2: Daily VWAP + Stdev Bands")
+
+// V1 (Weekly Fibo) inputs
+fib1 = input.float(1.618, "V1 Fibo extension 1")
+fib2 = input.float(2.618, "V1 Fibo extension 2")
+devV1 = input.float(150, "V1 Deviation threshold (sd > ...)")
+colorVWAP_V1 = input.color(color.orange, "V1 VWAP Color")
+v1_fib_up_col = input.color(color.red, "V1 Fib Up Color")
+v1_fib_dn_col = input.color(color.lime, "V1 Fib Down Color")
+v1_fill_up_tp = input.int(80, "V1 Up Fill Transparency (0-100)", minval=0, maxval=100)
+v1_fill_dn_tp = input.int(80, "V1 Down Fill Transparency (0-100)", minval=0, maxval=100)
+v1_barcolor_on = input.bool(true, "Enable V1 bar coloring (bull/bear)")
+
+// V2 (Daily Stdev) inputs
+devUp1 = input.float(1.28, "V2 Stdev above (1)")
+devDn1 = input.float(1.28, "V2 Stdev below (1)")
+devUp2 = input.float(2.01, "V2 Stdev above (2)")
+devDn2 = input.float(2.01, "V2 Stdev below (2)")
+colorVWAP_V2 = input.color(color.yellow, "V2 VWAP Color")
+v2_fill_up_col = input.color(color.red, "V2 Up Fill Color")
+v2_fill_dn_col = input.color(color.green, "V2 Down Fill Color")
+v2_fill_tp = input.int(100, "V2 Fill Transparency (0-100)", minval=0, maxval=100)  // fully transparent by default
+v2_barcolor_on = input.bool(true, "Enable V2 bar coloring (close vs daily VWAP)")
+showPrevVWAP = input.bool(false, "Show previous daily VWAP line?")
+
+// ----------------------
+// V1 - Weekly VWAP + Fibo dev extensions
+// ----------------------
+tW = time("W")
+newWeek = na(tW[1]) or tW > tW[1]
+
+var float v1_addsrc = 0.0
+var float v1_addvol = 0.0
+v1_addsrc := newWeek ? hlc3 * volume : nz(v1_addsrc[1]) + hlc3 * volume
+v1_addvol := newWeek ? volume : nz(v1_addvol[1]) + volume
+v1_vwap = v1_addvol != 0 ? v1_addsrc / v1_addvol : na
+
+var float v1_sn = 0.0
+v1_sn := newWeek ? 0.0 : nz(v1_sn[1]) + volume * (hlc3 - nz(v1_vwap[1], v1_vwap)) * (hlc3 - v1_vwap)
+v1_sd = v1_addvol > 0 ? math.sqrt(v1_sn / v1_addvol) : 0.0
+
+v1_Fibp2 = v1_vwap + fib2 * v1_sd
+v1_Fibp1 = v1_vwap + fib1 * v1_sd
+v1_Fibm1 = v1_vwap - fib1 * v1_sd
+v1_Fibm2 = v1_vwap - fib2 * v1_sd
+
+// Avoid inline ta.cross* calls — store in variables
+cross_under_v1 = ta.crossunder(low[1], v1_Fibm1[1])
+cross_over_v1  = ta.crossover(high[1], v1_Fibp1[1])
+
+v1_bull = showV1 and not na(v1_Fibm1[1]) and cross_under_v1 and low[1] >= v1_Fibm2[1] and low > v1_Fibm2 and low < v1_Fibm1 and v1_sd > devV1
+v1_bear = showV1 and not na(v1_Fibp1[1]) and cross_over_v1  and high[1] <= v1_Fibp2[1] and high < v1_Fibp2 and high > v1_Fibp1 and v1_sd > devV1
+
+// ----------------------
+// V2 - Daily VWAP + Stdev bands
+// ----------------------
+startD = request.security(syminfo.tickerid, "D", time)
+newDay = ta.change(startD) != 0
+
+var float v2_vwapsum = 0.0
+var float v2_volsum = 0.0
+var float v2_v2sum = 0.0
+v2_vwapsum := newDay ? hl2 * volume : nz(v2_vwapsum[1]) + hl2 * volume
+v2_volsum := newDay ? volume : nz(v2_volsum[1]) + volume
+v2_v2sum := newDay ? volume * hl2 * hl2 : nz(v2_v2sum[1]) + volume * hl2 * hl2
+
+v2_vwap = v2_volsum != 0 ? v2_vwapsum / v2_volsum : na
+v2_dev = v2_volsum != 0 ? math.sqrt(math.max(v2_v2sum / v2_volsum - v2_vwap * v2_vwap, 0)) : 0.0
+
+v2_U1 = v2_vwap + devUp1 * v2_dev
+v2_D1 = v2_vwap - devDn1 * v2_dev
+v2_U2 = v2_vwap + devUp2 * v2_dev
+v2_D2 = v2_vwap - devDn2 * v2_dev
+
+var float prev_v2_vwap = na
+prev_v2_vwap := newDay ? nz(v2_vwap[1]) : nz(prev_v2_vwap[1])
+
+// ----------------------
+// PLOTS
+// ----------------------
+// V1 plots
+pV1_vwap  = plot(showV1 ? v1_vwap  : na, title="V1 Weekly VWAP", color=colorVWAP_V1, linewidth=2)
+pV1_fp2  = plot(showV1 ? v1_Fibp2 : na, title="V1 Fib+2", color=v1_fib_up_col)
+pV1_fp1  = plot(showV1 ? v1_Fibp1 : na, title="V1 Fib+1", color=v1_fib_up_col)
+pV1_fm1  = plot(showV1 ? v1_Fibm1 : na, title="V1 Fib-1", color=v1_fib_dn_col)
+pV1_fm2  = plot(showV1 ? v1_Fibm2 : na, title="V1 Fib-2", color=v1_fib_dn_col)
+
+// V1 fills
+fill(pV1_fp2, pV1_fp1, color=color.new(v1_fib_up_col, v1_fill_up_tp))
+fill(pV1_fm2, pV1_fm1, color=color.new(v1_fib_dn_col, v1_fill_dn_tp))
+
+// V2 plots
+pV2_vwap = plot(showV2 ? v2_vwap : na, title="V2 Daily VWAP", color=colorVWAP_V2, linewidth=2)
+pV2_U1   = plot(showV2 ? v2_U1   : na, title="V2 U1", color=color.gray)
+pV2_D1   = plot(showV2 ? v2_D1   : na, title="V2 D1", color=color.gray)
+pV2_U2   = plot(showV2 ? v2_U2   : na, title="V2 U2", color=v2_fill_up_col)
+pV2_D2   = plot(showV2 ? v2_D2   : na, title="V2 D2", color=v2_fill_dn_col)
+pV2_prev = plot(showV2 and showPrevVWAP ? prev_v2_vwap : na, title="V2 Prev Daily VWAP", style=plot.style_circles, linewidth=2, color=close > prev_v2_vwap ? color.green : color.red)
+
+// V2 fills (transparent by default)
+fill(pV2_U1, pV2_U2, color=color.new(v2_fill_up_col, v2_fill_tp))
+fill(pV2_D1, pV2_D2, color=color.new(v2_fill_dn_col, v2_fill_tp))
+// grey fills between VWAP and first band (now transparent)
+fill(pV2_vwap, pV2_U1, color=color.new(color.gray, 100))
+fill(pV2_vwap, pV2_D1, color=color.new(color.gray, 100))
+
+// ----------------------
+// End of script
+// ----------------------
