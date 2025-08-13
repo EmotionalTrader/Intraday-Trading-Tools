@@ -7,7 +7,7 @@ Best used on **3-minute candlesticks**, this tool combines **Exponential Moving 
 
 ---
 
-## 📸 Screenshot
+## Screenshot
 
 ![EMA_VWAP_CROSSOVER_BUY_SIGNALS](screenshot.jpg)
 
@@ -21,12 +21,12 @@ My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/Emo
 
 ---
 
-## 📸 Screenshot
+## Screenshot
 *(Add a screenshot here, e.g., `![Buy Signal Example](Screenshot.JPG)`)*
 
 ---
 
-## ✨ Features
+## Features
 - **Optimized for Scalping**:
   - Specifically tuned for 3-minute candlestick charts
 - **EMA Cross Detection**:
@@ -55,7 +55,7 @@ My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/Emo
 
 ---
 
-## ⚡ Use Cases
+## Use Cases
 - **Intraday scalping** in volatile markets.
 - **Dip buying** during strong trends.
 - Filtering entries using both **trend (EMA)** and **mean reversion (VWAP)** signals.
@@ -73,7 +73,7 @@ My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/Emo
 
 ---
 
-## 📦 Installation
+## Installation
 1. Copy the code from `EMA-VWAP-Crossover-Buy-Signals.pine`
 2. Open **TradingView**
 3. Go to **Pine Editor**
@@ -88,7 +88,7 @@ The Pine Script codes were initially mostly generated with the help of large lan
 
 ---
 
-## 👤 Author
+## Author
 **EmotionalTrader**  
 - Futures trader, Python learner, aspiring asset trader, horse whisperer, space cowboy  
 - [TradingView Profile](https://www.tradingview.com/u/EmotionalTrader777/)  
