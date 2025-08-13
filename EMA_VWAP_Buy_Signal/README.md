@@ -84,7 +84,7 @@ My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/Emo
 ---
 
 ## Note on Code Origin:
-The Pine Script code was initially generated with the help of large language models (LLMs) to speed up the development process. However, all trading algorithms, logic, and parameter settings are my own original work. Each indicator has been thoroughly tested and deployed on TradingView, where it’s actively used and has been boosted by 30+ traders within the first days of release.
+The Pine Script codes were initially mostly generated with the help of large language models (LLMs) to speed up the development process. However, all trading algorithms, logic, and parameter settings are my own original work. Each indicator has been thoroughly tested and deployed on TradingView, where it’s actively used and has been tested and boosted by over 50 traders within the first days of release.
 
 ---
 
