@@ -15,13 +15,6 @@ Best used on **3-minute candlesticks** for scalping, this tool combines **Expone
 
 ---
 
-## 📎 Direct TradingView Access
-**https://www.tradingview.com/script/TUywCg1w-EMA-VWAP-Crossover-Sell-Signals/**
-
-My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/EmotionalTrader777/)**
-
----
-
 ## Features
 - **Optimized for Scalping**:
   - Designed for fast-paced intraday trading on 3-minute charts.
@@ -38,7 +31,7 @@ My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/Emo
 
 ---
 
-## 🛠 How It Works
+## How It Works
 1. **EMA Crossunder** — Fast EMA crosses below Slow EMA = potential bearish reversal.
 2. **Resistance Zone Check** — Price must be at or above VWAP, near defined resistance bands.
 3. **Signal Classification**:
@@ -57,7 +50,7 @@ My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/Emo
 
 ---
 
-## 📋 Inputs
+## Inputs
 | Input                       | Description                                   | Default |
 |-----------------------------|-----------------------------------------------|---------|
 | EMA Length 1                | Fast EMA length                               | 9       |
@@ -87,5 +80,6 @@ The Pine Script codes were initially mostly generated with the help of large lan
 - Futures trader, Python learner, aspiring asset trader, horse whisperer, space cowboy  
 - [TradingView Profile](https://www.tradingview.com/u/EmotionalTrader777/)  
 - [GitHub](https://github.com/EmotionalTrader)
+
 
 
