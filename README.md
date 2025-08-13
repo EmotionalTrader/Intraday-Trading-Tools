@@ -7,7 +7,7 @@ The Pine Script codes were initially mostly generated with the help of large lan
 
 ## Additional Information
 
-### Disclaimer
+### ⚠️ Disclaimer
 This software and its indicators are provided for educational and informational purposes only and do not constitute financial advice. Trading involves significant risk, and many individuals lose money, particularly when trading futures. Use these tools at your own risk, and consult a qualified financial advisor before making any trading decisions.
 
 ### Instrument Suitability
