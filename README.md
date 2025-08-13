@@ -28,6 +28,6 @@ These versions are very simple and basic, and they are free to use. I am current
 
 ## 👤 Author - **EmotionalTrader**  
 
-- Futures trader, Python learner, aspiring asset trader, horse whisperer, space cowboy  
+- Futures trader, Python learner, aspiring asset trader
 - [TradingView Profile](https://www.tradingview.com/u/EmotionalTrader777/)  
 - [GitHub](https://github.com/EmotionalTrader)
