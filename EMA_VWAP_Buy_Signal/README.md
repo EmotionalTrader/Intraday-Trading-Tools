@@ -11,18 +11,6 @@ Best used on **3-minute candlesticks**, this tool combines **Exponential Moving 
 
 ![EMA_VWAP_CROSSOVER_BUY_SIGNALS](screenshot.jpg)
 
----
-
-## 📎 Direct TradingView Access
-Add the indicator directly from the public library:  
-**[EMA VWAP Crossover Buy Signals](https://www.tradingview.com/script/CwsxodkT-EMA-VWAP-crossover-Buy-signals/)**
-
-My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/EmotionalTrader777/)**
-
----
-
-## Screenshot
-*(Add a screenshot here, e.g., `![Buy Signal Example](Screenshot.JPG)`)*
 
 ---
 
