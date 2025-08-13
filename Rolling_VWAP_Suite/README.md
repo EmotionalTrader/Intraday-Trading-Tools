@@ -3,13 +3,13 @@ A custom TradingView Pine Script indicator that calculates and plots multiple ro
 
 ---
 
-## 📸 Screenshot
+## Screenshot
 
 ![Screenshot](screenshot.jpg)
 
 ---
 
-## ✨ Features
+## Features
 
 - **Multiple Configurable VWAP Periods**:
   - 5-day VWAP
@@ -26,7 +26,7 @@ A custom TradingView Pine Script indicator that calculates and plots multiple ro
 
 ---
 
-## 📎 Direct TradingView Access
+## Direct TradingView Access
 
 You can add this indicator to your TradingView chart directly from the public library:  
 **[4-period Rolling VWAP Suite](https://www.tradingview.com/script/89sBe0V5-4-period-Rolling-VWAP-Suite/)**
@@ -35,7 +35,7 @@ My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/Emo
 
 ---
 
-## 🛠 How It Works
+## How It Works
 
 VWAP is calculated as:
 VWAP = (Σ (Typical Price × Volume)) / (Σ Volume)
@@ -52,7 +52,7 @@ Over the last `n` days (5, 10, 15, 20, 50), and dynamically computes VWAP for ea
 
 ---
 
-## ⚡ Use Cases
+## Use Cases
 
 - **Support & Resistance Mapping**:  
   Rolling VWAP levels often act as magnets for price, providing natural support/resistance.
@@ -75,7 +75,7 @@ Over the last `n` days (5, 10, 15, 20, 50), and dynamically computes VWAP for ea
 
 ---
 
-## 🎨 Color Scheme
+## Color Scheme
 
 - **5D** – Orange
 - **10D** – Soft Red
@@ -85,7 +85,7 @@ Over the last `n` days (5, 10, 15, 20, 50), and dynamically computes VWAP for ea
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### Option 1 — Add Directly on TradingView (Easiest)
 You can add this indicator to your TradingView chart in seconds from the public library:  
@@ -114,4 +114,5 @@ The Pine Script codes were initially mostly generated with the help of large lan
 - Futures trader, Python learner, aspiring asset trader, horse whisperer, space cowboy  
 - [TradingView Profile](https://www.tradingview.com/u/EmotionalTrader777/)  
 - [GitHub](https://github.com/EmotionalTrader)
+
 
