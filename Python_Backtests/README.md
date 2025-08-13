@@ -1,6 +1,6 @@
 # Python Backtests
 
-This folder contains Python translations of my TradingView Pine Script indicators for buy and sell signal testing.
+This folder will contain Python translations of my TradingView Pine Script indicators for buy and sell signal testing.
 
 By running these scripts, you can:
 - Backtest the `EMA_VWAP_Buy_Signal` and `EMA_VWAP_Sell_Signal` logic on real historical intraday data.
