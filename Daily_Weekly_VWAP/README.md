@@ -32,16 +32,7 @@ This suite is built for traders who want to track both macro (weekly) and micro 
 
 ---
 
-## 📎 Direct TradingView Access
-
-You can add this indicator to your TradingView chart directly from the public library:  
-**[VWAP Combo: Weekly + Fibo & Daily + Stand dev](https://www.tradingview.com/script/4QzabT8i-VWAP-Combo-Weekly-Fibo-Daily-Stand-dev/)**
-
-My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/EmotionalTrader777/)**
-
----
-
-## 🛠 How It Works
+## How It Works
 
 ### **V1 – Weekly VWAP + Fibonacci Bands**
 - VWAP resets at the start of each week.
@@ -69,7 +60,7 @@ My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/Emo
 
 ---
 
-## 📋 Inputs
+## Inputs
 
 ### **General**
 | Input            | Description                           |
@@ -131,6 +122,7 @@ The Pine Script codes were initially mostly generated with the help of large lan
 - Futures trader, Python learner, aspiring asset trader
 - [TradingView Profile](https://www.tradingview.com/u/EmotionalTrader777/)  
 - [GitHub](https://github.com/EmotionalTrader)
+
 
 
 
