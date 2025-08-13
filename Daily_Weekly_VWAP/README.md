@@ -9,14 +9,14 @@ This suite is built for traders who want to track both macro (weekly) and micro 
 
 ---
 
-## 📸 Screenshot
+## Screenshot
 
 
 ![Screenshot](screenshot.jpg)
 
 ---
 
-## ✨ Features
+## Features
 
 - **Two independent VWAP modes**:
   - **V1**: Weekly VWAP + ±Fibonacci SD bands
@@ -56,7 +56,7 @@ My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/Emo
 
 ---
 
-## ⚡ Use Cases
+## Use Cases
 
 - **Support & Resistance**:  
   VWAP bands act as dynamic S/R levels.
@@ -94,7 +94,7 @@ My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/Emo
 
 ---
 
-## 🎨 Color Scheme (Defaults)
+## Color Scheme (Defaults)
 - **V1 VWAP** — Orange
 - **V1 Bands Up** — Red
 - **V1 Bands Down** — Lime
@@ -103,7 +103,7 @@ My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/Emo
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### Option 1 — Add Directly on TradingView (Easiest)
 Add the indicator directly from the public library:  
@@ -125,11 +125,12 @@ The Pine Script codes were initially mostly generated with the help of large lan
 
 ---
 
-## 👤 Author
+## Author
 
 **EmotionalTrader**  
 - Futures trader, Python learner, aspiring asset trader, horse whisperer, space cowboy  
 - [TradingView Profile](https://www.tradingview.com/u/EmotionalTrader777/)  
 - [GitHub](https://github.com/EmotionalTrader)
+
 
 
