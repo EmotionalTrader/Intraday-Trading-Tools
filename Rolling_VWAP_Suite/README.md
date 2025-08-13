@@ -26,15 +26,6 @@ A custom TradingView Pine Script indicator that calculates and plots multiple ro
 
 ---
 
-## Direct TradingView Access
-
-You can add this indicator to your TradingView chart directly from the public library:  
-**[4-period Rolling VWAP Suite](https://www.tradingview.com/script/89sBe0V5-4-period-Rolling-VWAP-Suite/)**
-
-My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/EmotionalTrader777/)**
-
----
-
 ## How It Works
 
 VWAP is calculated as:
@@ -63,7 +54,7 @@ Over the last `n` days (5, 10, 15, 20, 50), and dynamically computes VWAP for ea
 
 ---
 
-## 📋 Inputs
+## Inputs
 
 | Setting          | Description                                | Default |
 |------------------|--------------------------------------------|---------|
@@ -108,12 +99,13 @@ The Pine Script codes were initially mostly generated with the help of large lan
 
 ---
 
-## 👤 Author
+## Author
 
 **EmotionalTrader**  
 - Futures trader, Python learner, aspiring asset trader
 - [TradingView Profile](https://www.tradingview.com/u/EmotionalTrader777/)  
 - [GitHub](https://github.com/EmotionalTrader)
+
 
 
 
