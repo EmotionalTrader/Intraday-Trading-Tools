@@ -90,6 +90,6 @@ The Pine Script codes were initially mostly generated with the help of large lan
 
 ## Author
 **EmotionalTrader**  
-- Futures trader, Python learner, aspiring asset trader, horse whisperer, space cowboy  
+- Futures trader, Python learner, aspiring asset trader 
 - [TradingView Profile](https://www.tradingview.com/u/EmotionalTrader777/)  
 - [GitHub](https://github.com/EmotionalTrader)
