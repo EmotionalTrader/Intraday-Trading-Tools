@@ -11,7 +11,8 @@ This suite is built for traders who want to track both macro (weekly) and micro 
 
 ## 📸 Screenshot
 
-![Daily_Weekly_VWAP](Screenshot.JPG)
+
+![Screenshot](screenshot.jpg)
 
 ---
 
@@ -130,3 +131,4 @@ The Pine Script code was initially generated with the help of large language mod
 - Futures trader, Python learner, aspiring asset trader, horse whisperer, space cowboy  
 - [TradingView Profile](https://www.tradingview.com/u/EmotionalTrader777/)  
 - [GitHub](https://github.com/EmotionalTrader)
+
