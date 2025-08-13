@@ -8,7 +8,7 @@ Best used on **3-minute candlesticks** for scalping, this tool combines **Expone
 
 ---
 
-## 📸 Screenshot
+## Screenshot
 
 ![EMA VWAP CROSSOVER SELL SIGNAL](screenshot.jpg)
 
@@ -22,7 +22,7 @@ My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/Emo
 
 ---
 
-## ✨ Features
+## Features
 - **Optimized for Scalping**:
   - Designed for fast-paced intraday trading on 3-minute charts.
 - **EMA Crossunder Detection**:
@@ -50,7 +50,7 @@ My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/Emo
 
 ---
 
-## ⚡ Use Cases
+## Use Cases
 - **Scalping short entries** during intraday reversals.
 - **Taking profits** on long positions at potential exhaustion points.
 - Filtering trades with both **trend (EMA)** and **mean reversion (VWAP)** signals.
@@ -68,7 +68,7 @@ My TradingView profile: **[EmotionalTrader777](https://www.tradingview.com/u/Emo
 
 ---
 
-## 📦 Installation
+## Installation
 1. Copy the code from `EMA-VWAP-Early-Sell-Signal.pine`
 2. Open **TradingView**
 3. Go to **Pine Editor**
@@ -82,9 +82,10 @@ The Pine Script codes were initially mostly generated with the help of large lan
 
 ---
 
-## 👤 Author
+## Author
 **EmotionalTrader**  
 - Futures trader, Python learner, aspiring asset trader, horse whisperer, space cowboy  
 - [TradingView Profile](https://www.tradingview.com/u/EmotionalTrader777/)  
 - [GitHub](https://github.com/EmotionalTrader)
+
 
