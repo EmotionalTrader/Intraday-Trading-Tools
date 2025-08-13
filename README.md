@@ -20,9 +20,6 @@ Trading based solely on indicators is not recommended. Many people lose money tr
 - Use indicators (like those provided here) as a tertiary decision basis.
 - Before entering a position, check **RSI (Relative Strength Index) levels** to gauge overbought or oversold conditions.
 
-### Community and Support
-If you have any questions, feel free to DM me on TradingView or GitHub. If you find these indicators useful, please star this repository on GitHub or boost them on my [TradingView account](https://www.tradingview.com/u/EmotionalTrader777/) Your support helps me continue developing these tools!
-
 ## Future Updates
 These are basic free versions. I’m working on more advanced algorithms, so watch this GitHub repository for future releases.
 
