@@ -9,7 +9,7 @@ By running these scripts, you can:
 
 ---
 
-## 📊 Strategies Included
+## Strategies Included
 
 ### 1. Buy Signals – `ema_vwap_buy_backtest.py`
 - Low-risk, high-reward scalping setups.
@@ -23,7 +23,7 @@ By running these scripts, you can:
 
 ---
 
-## ⚙️ Requirements / Installation
+## Requirements / Installation
 
 Make sure you have **Python 3.9+** installed.  
 Install the dependencies with:
@@ -33,6 +33,23 @@ pip install pandas numpy matplotlib yfinance
 pip install backtrader ta   # optional for advanced backtesting features
 ```
 
-## 📂 Data Sources
+##  Data Sources
 - Free: yfinance for SPY, QQQ, and other ETFs.
 - Paid: Polygon.io, IQFeed, or similar providers for MES/ES futures data (includes outside regular market hours).
+
+## How to Run
+From this folder, run:
+```bash
+python ema_vwap_buy_backtest.py
+```
+or
+```bash
+python ema_vwap_sell_backtest.py
+```
+The script will:
+- Download historical data.
+- Apply the EMA + VWAP strategy logic.
+- Display results in the console and/or plots.
+
+
+ ## Follow my GitHub for more indicators, signals, and trading tools coming soon.
