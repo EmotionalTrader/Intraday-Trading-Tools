@@ -26,5 +26,4 @@ These are basic free versions. I’m working on more advanced algorithms, so wat
 ### 👤 Author - **EmotionalTrader**  
 
 - Futures trader, Python learner, aspiring asset trader
-- [TradingView Profile](https://www.tradingview.com/u/EmotionalTrader777/)  
 - [GitHub](https://github.com/EmotionalTrader)
