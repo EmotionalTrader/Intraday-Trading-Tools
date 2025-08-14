@@ -1,0 +1,13 @@
+# keep raw/local data out of git
+Python_Backtests/data/
+!Python_Backtests/data/PLACEHOLDER.md
+!Python_Backtests/data/samples/
+
+# typical large outputs (keep repo lean)
+*.csv
+*.csv.txt
+*.png
+
+# python cache
+__pycache__/
+*.pyc
