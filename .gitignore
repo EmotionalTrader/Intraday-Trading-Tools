@@ -2,6 +2,8 @@
 Python_Backtests/data/
 !Python_Backtests/data/PLACEHOLDER.md
 !Python_Backtests/data/samples/
+!Python_Backtests/data/samples/*.csv
+!Python_Backtests/data/samples/*.png
 
 # typical large outputs (keep repo lean)
 *.csv
@@ -11,3 +13,7 @@ Python_Backtests/data/
 # python cache
 __pycache__/
 *.pyc
+
+# allow curated artefacts in reports/
+!reports/*.png
+!reports/*.csv
