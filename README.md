@@ -10,12 +10,10 @@ Intraday-Trading-Tools provides TradingView indicators and reproducible Python b
 - 3-min bars · 2025-06-01 → 2025-08-14 · 14:30–22:00 Europe/Stockholm  
 - TP 10 pts / SL 7.5 pts  
 - Result: **+65 pts** total · **58.3%** win · **Sharpe 3.07** · **MaxDD 30 pts**  
-  [Report](reports/BUY_mes_TP10_SL7p5_1430-2200.md) · [Trades CSV](reports/BUY_mes_trades_TP10_SL7p5_1430-2200.csv) · 
+  [Report](reports/BUY_mes_TP10_SL7p5_1430-2200.md) · [Trades CSV](reports/BUY_mes_trades_TP10_SL7p5_1430-2200.csv)
 
- <p>
-  <img src="reports/BUY_mes_TP10_SL7p5_1430-2200.png" alt="Equity curve — BUY TP10/SL7.5" width="900">
-</p>
-  
+<img src="https://raw.githubusercontent.com/EmotionalTrader/Intraday-Trading-Tools/main/reports/BUY_mes_TP10_SL7p5_1430-2200.png" alt="Equity curve — BUY TP10/SL7.5" width="900">
+
 
 ## Note on Code Origin
 The Pine Script code was initially generated with help from large language models (LLMs) to speed up development. All trading algorithms, logic, and parameters are my own original work. Each indicator has been tested and deployed on TradingView, where it’s actively used and has been boosted by 50+ traders within the first days of release.
