@@ -33,7 +33,7 @@ Intraday-Trading-Tools provides TradingView indicators and reproducible Python b
 
 
 ## Note on Code Origin
-The Pine Script indicators and Python code were initially generated with help from large language models (LLMs) to accelerate development. All trading algorithms, logic, and parameter settings are my own original work. Each indicator has been tested and deployed on TradingView, where it was used and boosted by 50+ traders within the first days of release. References/proof can be provided by email upon request. I prefer to develop my algorithms and trading strategies in a private, focused environment.
+The Pine Script indicators code were initially generated with help from large language models (LLMs) to accelerate development. All trading algorithms, logic, and parameter settings are my own original work. Each indicator has been tested and deployed on TradingView, where it was used and boosted by 50+ traders within the first days of release. References/proof can be provided by email upon request. I prefer to develop my algorithms and trading strategies in a private, focused environment.
 
 ## Additional Information
 
