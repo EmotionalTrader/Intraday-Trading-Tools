@@ -1,5 +1,6 @@
 import argparse
 from pathlib import Path
+import re
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -19,7 +20,6 @@ def rsi(series: pd.Series, length: int = 14) -> pd.Series:
     return 100 - (100 / (1 + rs))
 
 def session_id(index: pd.DatetimeIndex, tz: str) -> pd.Series:
-    # Ensure index in Stockholm for session grouping by calendar date
     idx = index if index.tz is not None else index.tz_localize(tz)
     idx = idx.tz_convert(tz)
     return pd.Series(idx.date, index=index)
@@ -54,7 +54,7 @@ def vwap_bands(df: pd.DataFrame, tz: str, mults=(1.0, 2.0, 3.0), mode="stdev"):
 
 def read_ninjatrader_csv(path: str) -> pd.DataFrame:
     """
-    NinjaTrader export format:
+    NinjaTrader export:
     YYYYMMDD HHMMSS;Open;High;Low;Close;Volume
     """
     df = pd.read_csv(path, sep=";", header=None,
@@ -64,11 +64,12 @@ def read_ninjatrader_csv(path: str) -> pd.DataFrame:
     return df
 
 def resample_3m(df1m: pd.DataFrame) -> pd.DataFrame:
-    o = df1m["Open"].resample("3T").first()
-    h = df1m["High"].resample("3T").max()
-    l = df1m["Low"].resample("3T").min()
-    c = df1m["Close"].resample("3T").last()
-    v = df1m["Volume"].resample("3T").sum()
+    # '3min' avoids the deprecation warning for 'T'
+    o = df1m["Open"].resample("3min").first()
+    h = df1m["High"].resample("3min").max()
+    l = df1m["Low"].resample("3min").min()
+    c = df1m["Close"].resample("3min").last()
+    v = df1m["Volume"].resample("3min").sum()
     out = pd.concat([o,h,l,c,v], axis=1).dropna()
     out.columns = ["Open","High","Low","Close","Volume"]
     return out
@@ -95,7 +96,6 @@ def build_signals(df3: pd.DataFrame, tz="Europe/Stockholm",
     out["VWAP"] = vwap
     out["L1"], out["L2"], out["L3"] = bands["D1"], bands["D2"], bands["D3"]
 
-    # crossing on previous bar; act on current open (no look-ahead)
     cross_up = (out["EMA_F"].shift(1) <= out["EMA_S"].shift(1)) & (out["EMA_F"] > out["EMA_S"])
     support  = ((out["Close"] >= out["L3"]) & (out["Close"] <= out["VWAP"])) | \
                ((out["Close"] >= out["L1"]) & (out["Close"] <= out["VWAP"]))
@@ -113,7 +113,6 @@ def backtest_buy(df3: pd.DataFrame, tz="Europe/Stockholm", tp_pts=10.0, sl_pts=1
         row_prev, row = df.iloc[i-1], df.iloc[i]
         ts = df.index[i]
 
-        # entry: signal on prev bar, enter at current bar OPEN
         if not in_pos and row_prev["BUY_SIG"]:
             in_pos = True
             entry_px = row["Open"]
@@ -122,7 +121,6 @@ def backtest_buy(df3: pd.DataFrame, tz="Europe/Stockholm", tp_pts=10.0, sl_pts=1
             continue
 
         if in_pos:
-            # intrabar TP/SL on the current bar's H/L; conservative rule if both hit
             tp_hit = row["High"] >= entry_px + tp_pts
             sl_hit = row["Low"]  <= entry_px - sl_pts
             if tp_hit and sl_hit:
@@ -138,7 +136,6 @@ def backtest_buy(df3: pd.DataFrame, tz="Europe/Stockholm", tp_pts=10.0, sl_pts=1
                 in_pos = False
                 trades[-1].update({"t_out": ts, "px_out": float(px_out), "rsi_out": float(row["RSI"]), "reason": reason})
 
-    # Optional: close any open trade on last bar close
     if in_pos:
         last = df.iloc[-1]
         trades[-1].update({"t_out": df.index[-1], "px_out": float(last["Close"]), "rsi_out": float(last["RSI"]), "reason": "EOD"})
@@ -148,23 +145,18 @@ def backtest_buy(df3: pd.DataFrame, tz="Europe/Stockholm", tp_pts=10.0, sl_pts=1
         return tr, {"trades": 0, "win_rate": 0, "pnl_sum": 0, "avg_pnl": 0, "exp": 0, "max_dd": 0, "sharpe": 0, "freq_per_day": 0}, pd.Series(dtype=float)
 
     tr["pnl"] = tr["px_out"] - tr["px_in"]
-
-    # equity curve in points
     eq = tr["pnl"].cumsum()
 
-    # daily returns for Sharpe (sum of trade PnL per day; 252-day scaling)
     daily = tr.set_index("t_out").resample("1D")["pnl"].sum().fillna(0.0)
     sharpe = 0.0
     if daily.std() != 0:
         sharpe = float((daily.mean() / daily.std()) * np.sqrt(252))
 
-    # max drawdown on trade-equity
     cum = eq.values
     roll_max = np.maximum.accumulate(cum)
     dd = roll_max - cum
     max_dd = float(dd.max()) if len(dd) else 0.0
 
-    # frequency per trading day (unique Stockholm dates present in filtered df)
     days = pd.Series(df.index.tz_convert("Europe/Stockholm").date).nunique()
     freq = float(len(tr) / max(1, days))
 
@@ -173,12 +165,26 @@ def backtest_buy(df3: pd.DataFrame, tz="Europe/Stockholm", tp_pts=10.0, sl_pts=1
         "win_rate": float((tr["pnl"] > 0).mean()),
         "pnl_sum": float(tr["pnl"].sum()),
         "avg_pnl": float(tr["pnl"].mean()),
-        "exp": float(tr["pnl"].mean()),  # expectancy per trade (no costs)
+        "exp": float(tr["pnl"].mean()),
         "max_dd": max_dd,
         "sharpe": sharpe,
         "freq_per_day": freq,
     }
     return tr, summary, eq
+
+# -------------------------
+# Filenames for scenario artefacts
+# -------------------------
+
+def fmt_num(x: float) -> str:
+    return str(int(x)) if float(x).is_integer() else str(x).replace(".", "p")
+
+def hours_slug(hours: str) -> str:
+    # "14:30-22:00" -> "1430-2200"
+    return re.sub(r"[^0-9\-]", "", hours.replace(":", ""))
+
+def stem_name(tp: float, sl: float, hours: str, side: str = "BUY") -> str:
+    return f"{side}_mes_TP{fmt_num(tp)}_SL{fmt_num(sl)}_{hours_slug(hours)}"
 
 # -------------------------
 # CLI
@@ -192,49 +198,43 @@ def main():
     ap.add_argument("--tp", type=float, default=10.0)
     ap.add_argument("--sl", type=float, default=10.0)
     ap.add_argument("--tz", default="Europe/Stockholm")
-    ap.add_argument("--hours", default="09:00-22:00")
+    ap.add_argument("--hours", default="14:30-22:00")  # default to your published session
     ap.add_argument("--plot", type=lambda s: s.lower()=="true", default=True)
     args = ap.parse_args()
 
-    # 1) Load 1-minute data
     df1 = read_ninjatrader_csv(args.csv)
-
-    # Optional slice by date
     if args.from_date:
         df1 = df1[df1.index >= pd.Timestamp(args.from_date)]
     if args.to_date:
         df1 = df1[df1.index <= pd.Timestamp(args.to_date) + pd.Timedelta(days=1)]
 
-    # 2) Resample to 3 minutes
     df3 = resample_3m(df1)
 
-    # 3) Filter Stockholm session hours
     start, end = args.hours.split("-")
     df3 = filter_hours(df3, tz=args.tz, start=start, end=end)
 
-    # 4) Run backtest
     trades, summary, eq = backtest_buy(df3, tz=args.tz, tp_pts=args.tp, sl_pts=args.sl)
 
-    # 5) Save outputs
     Path("reports").mkdir(exist_ok=True)
-    Path("Python_Backtests/data").mkdir(parents=True, exist_ok=True)
 
-    # trades (kept local/ignored by git)
-    trades_path = Path("Python_Backtests/data/mes_buy_trades.csv")
-    trades.to_csv(trades_path, index=False)
+    stem = stem_name(args.tp, args.sl, args.hours, side="BUY")
+    trades_csv = Path("reports") / f"{stem.replace('BUY_', 'BUY_mes_trades_')}.csv"
+    summary_md = Path("reports") / f"{stem}.md"
+    equity_png = Path("reports") / f"{stem}.png"
 
-    # equity plot (kept local/ignored by git)
+    # Save trades (now in /reports so it can be linked)
+    trades.to_csv(trades_csv, index=False)
+
+    # Save equity plot (optional)
     if args.plot and not eq.empty:
         plt.figure(figsize=(10, 4))
         eq.plot()
         plt.title("MES Buy Strategy – Cumulative P&L (points)")
         plt.xlabel("Time"); plt.ylabel("P&L")
         plt.tight_layout()
-        out_png = Path("Python_Backtests/data/mes_buy_equity.png")
-        plt.savefig(out_png, dpi=144)
+        plt.savefig(equity_png, dpi=144)
         plt.close()
 
-    # small commit-friendly summary
     start_dt = df3.index.min()
     end_dt = df3.index.max()
     md = [
@@ -255,14 +255,16 @@ def main():
         f"- Sharpe (daily, points): {summary['sharpe']:.2f}",
         f"- Trades per day: {summary['freq_per_day']:.2f}",
         "",
-        "_Data source: local NinjaTrader export; see `reports/data_summary_*.txt` for provenance._",
+        f"_Artefacts:_ [Trades CSV]({trades_csv.name}) · "
+        + (f"[Equity PNG]({equity_png.name})" if equity_png.exists() else "Equity PNG (not generated)"),
     ]
-    Path("reports/mes_buy_summary.md").write_text("\n".join(md), encoding="utf-8")
+    summary_md.write_text("\n".join(md), encoding="utf-8")
 
     print("Saved:")
-    print(f"- trades CSV  -> {trades_path}")
-    print("- summary MD  -> reports/mes_buy_summary.md")
-    print("- equity PNG  -> Python_Backtests/data/mes_buy_equity.png (local)")
+    print(f"- trades CSV  -> {trades_csv}")
+    print(f"- summary MD  -> {summary_md}")
+    if equity_png.exists():
+        print(f"- equity PNG  -> {equity_png}")
 
 if __name__ == "__main__":
     main()
