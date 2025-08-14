@@ -8,11 +8,9 @@ Intraday-Trading-Tools provides TradingView indicators and reproducible Python b
 
 **Validated EMA/VWAP Crossover Buy Signal (MES)**
 - 3-min bars · 2025-06-01 → 2025-08-14 · 14:30–22:00 Europe/Stockholm  
-- TP 10 pts / SL 7.5 pts  
+- TP 10 pts / SL 7.5 pts
 - Result: **+65 pts** total · **58.3%** win · **Sharpe 3.07** · **MaxDD 30 pts**  
-  [Report](reports/BUY_mes_TP10_SL7p5_1430-2200.md) · [Trades CSV](reports/BUY_mes_trades_TP10_SL7p5_1430-2200.csv)
-
-<img src="https://raw.githubusercontent.com/EmotionalTrader/Intraday-Trading-Tools/main/reports/BUY_mes_TP10_SL7p5_1430-2200.png" alt="Equity curve — BUY TP10/SL7.5" width="900">
+  [Report](reports/BUY_mes_TP10_SL7p5_1430-2200.md) · [Trades CSV](reports/BUY_mes_trades_TP10_SL7p5_1430-2200.csv) · [Equity curve](/reports/BUY_mes_TP10_SL7p5_1430-2200.png)
 
 
 ## Note on Code Origin
