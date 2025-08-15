@@ -22,7 +22,6 @@ Intraday-Trading-Tools provides TradingView indicators and reproducible Python b
 - Result: **+31.5 pts** total · **47.8%** win · **Sharpe 1.05** · **MaxDD 30 pts**  
   [Report](reports/SELL_mes_TP10p0_SL7p5_1430-2200.md) · [Trades CSV](reports/SELL_mes_trades_TP10_SL7p5_1430-2200.csv)
 
-- **[Report](reports/SELL_mes_TP10p0_SL7p5_1430-2200.md)** · **[Trades CSV](reports/SELL_mes_trades_TP10_SL7p5_1430-2200.csv)**
 #### Short Selling Equity Curve
 
 <img src="reports/SELL_mes_TP10p0_SL7p5_1430-2200.png" alt="Equity curve — SELL TP10/SL7.5" width="900">
