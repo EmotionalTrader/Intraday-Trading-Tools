@@ -15,7 +15,7 @@ Intraday-Trading-Tools provides TradingView indicators and reproducible Python b
 
   <img src="reports/BUY_mes_TP10_SL7p5_1430-2200.png" alt="Equity curve — BUY TP10/SL7.5" width="900">
 
-### Validated EMA/VWAP Crossover Sell Signal (MES)
+**Validated EMA/VWAP Crossover Sell Signal (MES)**
 
 - 3-min bars · 2025-06-01 → 2025-08-14 · 14:30–22:00 Europe/Stockholm  
 - TP 10 pts / SL 7.5 pts  
