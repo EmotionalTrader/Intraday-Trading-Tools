@@ -1,4 +1,4 @@
-# Intraday Trading Tools — Public (Marketing Only)
+# Intraday Trading Tools 
 
 This repo is for **product updates and access logistics**.  
 No trading code or per-trade CSVs are published here.
