@@ -46,10 +46,6 @@ No trading code or per-trade CSVs are published here.
 - Announcements and updates  
 - Contact instructions
 
-## 🚫 What this repo does NOT contain
-- No Pine or Python trading code  
-- No per-trade CSVs or parameter dumps
-
 ---
 
 ## 👤 Author — **EmotionalTrader**
