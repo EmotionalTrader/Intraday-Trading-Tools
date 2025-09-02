@@ -1,5 +1,9 @@
 # Intraday Trading Tools 
 
+I am building a focused set of indicators for **day trading **. Based on user requests, I am packaging the first release (**EMAVWAP-X**) for **TradingView** (invite-only) and preparing a **NinjaTrader** port. My immediate priority is **usability and accuracy** (clear plots, one-shot alerts, minimal noise). After that, I’ll run a short **test-user validation** phase.
+
+**Target date for initial test access:** **10 September** (subject to change).
+
 This repo is for **product updates and access logistics**.  
 For access inquiries, email **sohail@creditive.com**
 ---
