@@ -11,9 +11,8 @@ As thanks, test users will receive a **~70-90% discount** on the final subscript
 **How to join the waitlist (private):**  
 Email **sohail@creditive.com** with subject **“EMAVWAP-X Waitlist”** and include:  
 - Your **TradingView username** (required)  
-- Your **email** (used only for updates and support. It will never be shared with third parties, and you won’t receive spam.)
+- Your **email** (used only for updates and support. It will never be shared with third parties, and you won’t receive spam. I believe spam-marketing should be illegal)
 
-**Notes**
-- This public repo contains **no trading code** or parameters.  
+**Notes**  
 - Updates, release notes, and access logistics will be posted here.  
 - Invite-only access will be granted later on TradingView (and potentially NinjaTrader).

@@ -1,8 +1,7 @@
 # Intraday Trading Tools 
 
 This repo is for **product updates and access logistics**.  
-No trading code or per-trade CSVs are published here.
-
+For access inquiries, email **sohail@creditive.com**
 ---
 
 ## 📊 Executive Summary (showcase of the first backtest)
@@ -42,7 +41,7 @@ No trading code or per-trade CSVs are published here.
 ---
 
 ## 📦 What this repo contains
-- Product page(s) and sanitized reports/images  
+- Product page(s) and reports/images  
 - Announcements and updates  
 - Contact instructions
 
