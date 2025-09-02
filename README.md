@@ -5,7 +5,7 @@ I am building a focused set of indicators for **day trading**. Based on user req
 **Target date for initial test access:** **10 September** (subject to change).
 
 This repo is for **product updates and access logistics**.  
-For access inquiries, email **sohail@creditive.com**
+For access inquiries, email **sohail.mohseni@gmail.com**
 ---
 
 > **Work-in-progress**: visuals below are early snapshots of the current signals.
@@ -67,5 +67,5 @@ For access inquiries, email **sohail@creditive.com**
 ---
 
 ## 📬 Contact
-Email **sohail@creditive.com** with subject **“EMAVWAP-X Waitlist”**.  
+Email **sohail.mohseni@gmail.com** with subject **“EMAVWAP-X Waitlist”**.  
 Include your **TradingView username** and your **email** (only for updates/support; never shared; no spam).
