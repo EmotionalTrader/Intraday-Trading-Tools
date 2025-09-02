@@ -37,7 +37,6 @@ For access inquiries, email **sohail@creditive.com**
 - Adapting to various market conditions with deeper backtests on 2–5 years of historical data.  
 - Adapting to multi-instrument use: stocks, crypto, and commodities.  
 - Invite-only distribution via TradingView (later: NinjaTrader port).  
-- Early test users get ~70–90% discount in return for feedback.
 
 
 ➡️ **Details & waitlist instructions:** see [`products/emavwap-x.md`](products/emavwap-x.md)
