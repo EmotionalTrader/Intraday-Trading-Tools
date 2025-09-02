@@ -7,13 +7,14 @@ I am building a focused set of indicators for **day trading**. Based on user req
 This repo is for **product updates and access logistics**.  
 For access inquiries, email **sohail@creditive.com**
 ---
+
 > **Work-in-progress**: visuals below are early snapshots of the current signals.
 
 ### Current BUY signal (WIP)
-![BUY signal](reports/screenshotbuy.png)
+![BUY signal](reports/screenshotbuy.jpg)
 
 ### Current SELL signal (WIP)
-![SELL signal](reports/screenshotsell.png)
+![SELL signal](reports/screenshotsell.jpg)
 
 ---
 
