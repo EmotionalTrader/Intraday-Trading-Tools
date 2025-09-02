@@ -7,6 +7,15 @@ I am building a focused set of indicators for **day trading**. Based on user req
 This repo is for **product updates and access logistics**.  
 For access inquiries, email **sohail@creditive.com**
 ---
+> **Work-in-progress**: visuals below are early snapshots of the current signals.
+
+### Current BUY signal (WIP)
+![BUY signal](reports/screenshotbuy.png)
+
+### Current SELL signal (WIP)
+![SELL signal](reports/screenshotsell.png)
+
+---
 
 ## 📊 Executive Summary (showcase of the first backtest)
 
@@ -25,9 +34,9 @@ For access inquiries, email **sohail@creditive.com**
 <img src="reports/SELL_mes_TP10p0_SL7p5_1430-2200.png" alt="Equity curve — SELL TP10/SL7.5" width="900">
 
 **Interpreting These Results**  
-- Test period: quiet summer regime, index near all-time highs.  
+- Test period: quiet summer regime, slight bullish index near all-time highs.  
 - Implication: more false signals and headwind for shorts.  
-- The chosen bracket (TP 10 / SL 7.5) is intentionally conservative.
+- The chosen bracket (TP 10 / SL 7.5) is intentionally conservative.s
 
 ---
 
