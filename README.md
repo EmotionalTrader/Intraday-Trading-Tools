@@ -48,7 +48,7 @@ For access inquiries, email **sohail.mohseni@gmail.com**
 - Adapting to multi-instrument use: stocks, crypto, and commodities.  
 - Invite-only distribution via TradingView (later: NinjaTrader port).  
 
-- **Next version will include:** quantitative analysis & ML modeling (feature selection, probability calibration, regime tagging),
+- **Future version will include:** quantitative analysis & ML modeling (feature selection, probability calibration, regime tagging),
   advanced futures & indicator modules, and deeper multi-year **tick-data** backtests to sharpen accuracy and reduce overfitting.
 
 
