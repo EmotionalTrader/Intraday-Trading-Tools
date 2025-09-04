@@ -5,7 +5,7 @@ I am building a focused set of indicators for **day trading**. Based on user req
 **Target date for initial test access:** **10 September** (subject to change).
 
 This repo is for **product updates and access logistics**.  
-For access inquiries, email **sohail.mohseni@gmail.com**
+For access inquiries, email **quantastic.analysis@gmail.com**
 ---
 
 > **Work-in-progress**: visuals below are early snapshots of the current signals.
@@ -51,7 +51,6 @@ For access inquiries, email **sohail.mohseni@gmail.com**
 - **Future version will include:** quantitative analysis & ML modeling (feature selection, probability calibration, regime tagging),
   advanced futures & indicator modules, and deeper multi-year **tick-data** backtests to sharpen accuracy and reduce overfitting.
 
-
 ➡️ **Details & waitlist instructions:** see [`products/emavwap-x.md`](products/emavwap-x.md)
 
 ---
@@ -70,5 +69,5 @@ For access inquiries, email **sohail.mohseni@gmail.com**
 ---
 
 ## 📬 Contact
-Email **sohail.mohseni@gmail.com** with subject **“EMAVWAP-X Waitlist”**.  
+Email **quantastic.analysis@gmail.com** with subject **“EMAVWAP-X Waitlist”**.  
 Include your **TradingView username** and your **email** (only for updates/support; never shared; no spam).
