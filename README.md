@@ -141,7 +141,7 @@ See `reports/EVIDENCE_MES_long_retention_buckets.csv`.
 
 ---
 
-## 📬 Access / Buy
+## 📬 Access 
 
 - **TradingView (indicator page):** [_Dynamic EMAxWVAP Alerts_  ](https://www.tradingview.com/script/qFRIeiJQ-Dynamic-EMA-x-VWAP-Alerts/)
 - **LemonSqueezy (checkout):** _link_  
