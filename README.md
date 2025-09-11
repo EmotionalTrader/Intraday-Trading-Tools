@@ -144,9 +144,6 @@ See `reports/EVIDENCE_MES_long_retention_buckets.csv`.
 ## 📬 Access 
 
 - **TradingView (indicator page):** [_Dynamic EMAxWVAP Alerts_  ](https://www.tradingview.com/script/qFRIeiJQ-Dynamic-EMA-x-VWAP-Alerts/)
-- **LemonSqueezy (checkout):** _link_  
-
-**Status:** LemonSqueezy checkout is being finalized. **Join the waitlist** by emailing **quantastic.analysis@gmail.com** with your **TradingView username**.
 
 ---
 
