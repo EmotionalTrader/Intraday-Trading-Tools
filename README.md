@@ -166,4 +166,4 @@ From emotional → technical → quant trader. Trading futures while building ML
 
 ## ⚖️ Legal
 
-Research & education only. Not investment advice. Markets involve risk; **past performance does not guarantee future results**. TradingView is not a party to any sale.
+Research & education only. Not investment advice. Markets involve risk; **past performance does not guarantee future results**. 
