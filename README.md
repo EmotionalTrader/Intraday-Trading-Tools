@@ -1,7 +1,7 @@
 # Intraday Trading Tools
 
 ## Tradingview access
-The Dynamic EMAxVWAP Alerts is temporarily unavailable on TradingView while I address a compliance review. I'm working on it and will update this page once resolved when access returns.
+The Dynamic EMAxVWAP Alerts is temporarily unavailable on TradingView while I address a compliance review. I'm working on it and will update this page once resolved and when access returns.
 
 ---
 
