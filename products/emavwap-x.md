@@ -5,9 +5,13 @@
 **Platform:** TradingView (invite-only script). **Later:** NinjaTrader port (planned).
 
 **How to join the waitlist (private):**  
-Email **quantastic.analysis@gmail.com** with subject **“EMAVWAP-X Waitlist”** and include:  
+Email **hello@quantastico.com** with subject **“EMAVWAP-X Waitlist”** and include:  
 - Your **TradingView username** (required)  
 - Your **email** (used only for updates and support. It will never be shared with third parties, and you won’t receive spam. I believe spam-marketing should be illegal)
+
+## Access/Preview 
+
+- **TradingView (indicator page):** [_Dynamic EMAxWVAP Alerts_  ](https://www.tradingview.com/script/qFRIeiJQ-Dynamic-EMA-x-VWAP-Alerts/)
 
 **Notes**  
 - Updates, release notes, and access logistics will be posted here.  
