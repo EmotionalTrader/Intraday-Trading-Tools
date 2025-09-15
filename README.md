@@ -1,8 +1,5 @@
 # Intraday Trading Tools
 
-## Tradingview access
-The Dynamic EMAxVWAP Alerts is temporarily unavailable on TradingView while I address a compliance review. Tradinview wants me to disclose every secret sauce behind indikator strategy to have it published there...I'm working on it and will update this page once resolved and when access returns.
-
 ---
 
 I am building a focused set of indicators for **day trading**. Based on user requests, I am packaging the first release (**Dynamic EMA x VWAP Alerts**) for **TradingView** (invite-only) and preparing a **NinjaTrader** port. My immediate priority is **usability and accuracy** (clear plots, one-shot alerts, minimal noise). After that, I’ll run a short **test-user validation** phase.
