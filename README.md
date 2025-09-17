@@ -5,7 +5,7 @@
 I am building a focused set of indicators for **day trading**. Based on user requests, I am packaging the first release (**Dynamic EMA x VWAP Alerts**) for **TradingView** (invite-only) and preparing a **NinjaTrader** port. My immediate priority is **usability and accuracy** (clear plots, one-shot alerts, minimal noise). After that, I’ll run a short **test-user validation** phase.
 
 This repo is for **product updates and access logistics**.  
-For access inquiries (waitlist), email **hello@quantastico.com**.
+For access email **hello@quantastico.com** or dm via Tradinview: **https://www.tradingview.com/script/wF5AdhHK-Dynamic-EMA-x-VWAP-Alerts/**
 
 ---
 
@@ -145,7 +145,7 @@ See `reports/EVIDENCE_MES_long_retention_buckets.csv`.
 
 ## 📬 Access 
 
-- **TradingView (indicator page):** [_Dynamic EMAxWVAP Alerts_  ](https://www.tradingview.com/script/qFRIeiJQ-Dynamic-EMA-x-VWAP-Alerts/)
+- **TradingView (indicator page):** [_Dynamic EMAxWVAP Alerts_  ](https://www.tradingview.com/script/wF5AdhHK-Dynamic-EMA-x-VWAP-Alerts/)
 
 ---
 
