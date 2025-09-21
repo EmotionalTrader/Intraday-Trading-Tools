@@ -54,6 +54,19 @@ For access email **hello@quantastico.com** or dm via Tradinview: **https://www.t
 **Swing example** — higher-timeframe usage for context.  
 ![Swing example](reports/Dynamic_EMAxVWAP_Alerts_Swing.png)
 
+**Engine illustration** — schematic view of the EMA/VWAP signal engine.  
+![Engine illustration](reports/swing_ex_nq_engine.png)
+
+**Swing case (support/resistance)** — showing VWAP bands guiding entries.  
+![Swing case (S/R)](reports/swing_ex_nq_sr.png)
+
+**BTC example (pre-filtering)** — many raw signals without calibration filters.  
+![BTC pre-filtering](reports/swing_ex_btc_pre.png)
+
+**BTC example (post-calibration filtering)** — fewer, higher-quality signals after ML-calibrated filters are applied.  
+![BTC post-filtering](reports/swing_ex_btc_post.png)
+
+
 ---
 
 ## 🧾 Evidence (MES · 1m & 3m · long-only)
@@ -128,18 +141,6 @@ See `reports/EVIDENCE_MES_long_retention_buckets.csv`.
 - ✅ **Adapting to various market conditions** with deeper backtests on 2–5 years of historical data (incl. regime analysis).  
 - ✅ **Adapting to multi-instrument use:** stocks, crypto, and commodities.  
 - ✅ **Invite-only distribution via TradingView** (later: NinjaTrader port).  
-- ⏳ **Short-side calibration evidence** (coming).  
-- 🔜 **Future updates:** quantitative analysis & ML modeling (feature selection, probability calibration, regime tagging), advanced futures & indicator modules, and **multi-year tick-data backtests** to sharpen accuracy and reduce overfitting.
-
-➡️ **Details & waitlist instructions:** see `products/emavwap-x.md`
-
----
-
-## 📦 What this repo contains
-
-- Product page(s) and reports/images  
-- Announcements and updates  
-- Contact instructions
 
 ---
 
@@ -151,18 +152,14 @@ See `reports/EVIDENCE_MES_long_retention_buckets.csv`.
 
 ## 📝 Full reports / custom backtesting
 
-For a **complete private report** or custom runs for other instruments/timeframes, **open a GitHub Issue** with your symbol(s), timeframe(s), and risk preferences.  
-> We handle complete-report requests **via GitHub Issues only** (not DM/email).
-
----
-
-## 👤 Author — EmotionalTrader
-
-From emotional → technical → quant trader. Trading futures while building ML models in Python.  
-- [GitHub](https://github.com/EmotionalTrader)
+For a **complete private report** or custom runs (backtesting and/or ML calibration services) for other instruments/timeframes, contact me on hello@quantastico.com 
 
 ---
 
 ## ⚖️ Legal
 
-Research & education only. Not investment advice. Markets involve risk; **past performance does not guarantee future results**. 
+The tools, scripts, and indicators presented here are provided for educational and informational purposes only. They are not financial advice and should not be interpreted as investment recommendations, trading signals, or a solicitation to buy or sell any financial instrument.
+
+All forms of trading and investing involve risk. The past performance of any security, strategy, or market condition does not guarantee future outcomes. Users are solely responsible for their own trading and investment decisions, including evaluating their financial situation, objectives, and risk tolerance.
+
+By using this indicator, you acknowledge that you do so at your own risk. The author accepts no liability for any direct or indirect loss or damage—including, without limitation, loss of profits—that may arise from the use of, or reliance upon, this tool.
